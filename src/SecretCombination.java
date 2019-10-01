@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SecretCombination {
-    public char[] secret;
+    public Color[] secret;
     int deads;
     int wounded;
     public SecretCombination(){
@@ -29,24 +29,24 @@ public class SecretCombination {
         this.wounded = wounded;
     }
 
-    public void setSecret(char[] secret) {
+    public void setSecret(Color[] secret) {
         this.secret = secret;
     }
 
-    public char[] getSecret() {
+    public Color[] getSecret() {
         return this.secret;
     }
 
-    public char [] generateSecretCombination(){
+    public Color [] generateSecretCombination(){
         Random rnd = new Random();
-        char [] key = new char[4];
+        Color [] key = new Color[4];
         int op = 0;
         char a;
         Integer [] codigoColores = generateRandomNumbers(0,6);
         for(int i = 0; i<4; i++){
+            key[i]=new Color();
+            key[i]=key[i].generateColor(codigoColores[i]);
 
-            a = generateColor(codigoColores[i]);
-            key[i]=a;
         }
        return key;
     }
@@ -60,16 +60,8 @@ public class SecretCombination {
         return numeros;
     }
 
-    public char generateColor(int indicador){
-        switch (indicador){
-            case 0: return 'r';
-            case 1: return 'b';
-            case 2: return 'y';
-            case 3: return 'g';
-            case 4: return 'o';
-            default: return 'p';
-        }
-    }
+
+
 
     /*public char [] decodeSolution(){
         ArrayList<Character> key = this.secret;
@@ -88,18 +80,19 @@ public class SecretCombination {
 
     public char[] checkProposal(String proposal){
         int dead=0, wounded =0;
-        char it,o;
+        Color it;
+        char o;
         char [] deadandwounded;
         deadandwounded = new char[]{' ', ' ', ' ', ' '};
         for(int i =0; i<proposal.length(); i++){
             for(int j=0 ; j<4; j++){
                 it = this.secret[i];
                 o = proposal.charAt(j);
-                if(o == it && i==j){
+                if(o == it.getName() && i==j){
                     dead++;
                     deadandwounded[i] = 'D';
                 }
-                else if(o == it && i!=j){
+                else if(o == it.getName() && i!=j){
                     wounded++;
                     deadandwounded[i] = 'W';
                 }

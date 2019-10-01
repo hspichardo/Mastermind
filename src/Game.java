@@ -13,7 +13,7 @@ public class Game {
         Scanner input = new Scanner(System.in);
         System.out.println(solu.getSecret());
         System.out.println("------------ Bienvenido al juego MasterMind -----------");
-        char [] solution = new char[4];
+        Color [] solution = new Color[4];
         solution = solu.getSecret();
         System.out.println("Clave Generada: ****");
         do {
