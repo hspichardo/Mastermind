@@ -1,3 +1,5 @@
+package Models;
+
 public class Mastermind {
     private Game juego;
     public static void main(String[] args) {
