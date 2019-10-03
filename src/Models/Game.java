@@ -35,7 +35,7 @@ public class Game {
 
 
             proposalCombination.setProposalCombination(propousal);
-            result = proposalCombination.proposedcombinationview.checkProposal(solu);
+            result = proposalCombination.checkProposal(solu);
             System.out.println(result.getResultArray());
             System.out.println("Tienes " + result.getDeads() + " Muertes y " + result.getWoundeds() + " Heridos");
             this.attemps++;

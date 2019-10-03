@@ -10,7 +10,7 @@ public class ProposalCombination extends Combination {
         super();
         this.result = new Result();
         this.proposedcombinationview = new ProposedCombinationView();
-        this.proposedcombinationview.proposalcombination = this;
+
     }
 
     public Color[] getPropousal(){
