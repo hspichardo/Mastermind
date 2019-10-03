@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SecretCombination extends Combination {
-    SecretCombinationView secretcombinarionview;
+    public SecretCombinationView secretcombinarionview;
 
     public SecretCombination(){
         super();

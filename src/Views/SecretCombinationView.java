@@ -1,6 +1,7 @@
 package Views;
 
 import Models.Color;
+import Models.SecretCombination;
 
 import java.util.List;
 import java.util.Random;
@@ -26,5 +27,11 @@ public class SecretCombinationView {
         Integer[] numeros = temp.toArray(new Integer[temp.size()]);
 
         return numeros;
+    }
+
+    public void printSecret(SecretCombination solu){
+        for(int i=0; i<solu.getSecret().length;i++){
+            System.out.println(solu.getSecret()[i].getName());
+        }
     }
 }

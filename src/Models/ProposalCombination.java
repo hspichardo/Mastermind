@@ -4,7 +4,7 @@ import Views.ProposedCombinationView;
 
 public class ProposalCombination extends Combination {
     Result result;
-    ProposedCombinationView proposedcombinationview;
+    public ProposedCombinationView proposedcombinationview;
 
     public ProposalCombination() {
         super();
